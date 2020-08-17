@@ -1,8 +1,8 @@
 {
     "disableAutoUpdate": false,
     "name": "Fast Solo Dungeons",
-    "author": "Shalltearz & PsykoDev",
-    "description": "Tera proxy module that redirects teleport location after entering solo dungeons.",
+    "author": "Shalltearz & PsykoDev & Skxpath",
+    "description": "Tera proxy module that redirects teleport location after entering solo dungeons and resets upon looting",
     "version": "1.1",
     "options": {
         "niceName": "Fast Solo Dungeons",
@@ -11,6 +11,6 @@
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"
     },
-    "servers": ["https://raw.githubusercontent.com/PsykoDev/Fast-Solo-Dungeons/master/"],
-    "supportUrl": "https://github.com/PsykoDev/Fast-Solo-Dungeons/issues"
+    "servers": ["https://raw.githubusercontent.com/Skxpath/Fast-Solo-Dungeons/master/"],
+    "supportUrl": "https://github.com/Skxpath/Fast-Solo-Dungeons/issues"
 }

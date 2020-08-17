@@ -6,6 +6,7 @@
 * Ghilieglade
 * Ace-Akasha
 * Ace-Baracos
+* Ace-Lilith
 
 ---
 
@@ -25,4 +26,4 @@
 ---
 
 ## Author
-* Shalltearz Modified and updated by PsykoDev
+* Shalltearz Modified and updated by PsykoDev and updated again by Skxpath (to add Ace-Lilith support)

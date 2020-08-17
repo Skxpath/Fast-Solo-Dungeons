@@ -7,11 +7,11 @@ module.exports = function Solodungeon(mod) {
 		mod.warn('You are trying to use this module on an unsupported version of tera-proxy. It may not work as expected, and even if it does now it may break at any point in the future.');
 	
     const blacklist = [9713];
-    const whitelist = [9031, 9032];
+    const whitelist = [9031, 9032, 3016];
 
     let loot,
         zone;
-
+	
     mod.command.add('fastsolo', () => {
         if (ui) {
             ui.show();
@@ -49,7 +49,11 @@ module.exports = function Solodungeon(mod) {
             case 9032: // Ace Baracos
                 event.loc = new Vec3(28214, 178550, -1675)
                 event.w = 1.5
-                return true;			
+                return true;
+            case 3016: // Ace Lilith 
+                event.loc = new Vec3(-99889, 59995, 8023)
+                event.w = -1.3
+                return true;					
             default: return;
         }
     });
@@ -60,12 +64,12 @@ module.exports = function Solodungeon(mod) {
 
     mod.hook('S_DESPAWN_DROPITEM', 4, event => {
         if(event.gameId.toString() in loot) delete loot[event.gameId.toString()];
-        if(Object.keys(loot).length < 1 && zone > 9000) resetinstance();
+        if(Object.keys(loot).length < 1 && (zone == 9031 || zone == 9032 || zone == 3016)) resetinstance();
     });
 
     function resetinstance() {
         if (!mod.settings.acereset) return;
-        if((zone == 9031 || zone == 9032|| zone == 3016) && whitelist.indexOf(zone) > -1)  mod.send('C_RESET_ALL_DUNGEON', 1, null);
+        if(whitelist.indexOf(zone) > -1)  mod.send('C_RESET_ALL_DUNGEON', 1, null);
     }
 
 	const data = {7005: {spawn: new Vec3(-481, 6301, 1956), redirect: new Vec3(-341, 8665, 2180), w: -0.96}};	
