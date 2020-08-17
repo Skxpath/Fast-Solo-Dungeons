@@ -11,6 +11,6 @@
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"
     },
-    "servers": ["https://raw.githubusercontent.com/Skxpath/Fast-Solo-Dungeons/master/"],
+    "servers": "https://raw.githubusercontent.com/Skxpath/Fast-Solo-Dungeons/master/",
     "supportUrl": "https://github.com/Skxpath/Fast-Solo-Dungeons/issues"
 }
